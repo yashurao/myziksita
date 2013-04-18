@@ -1,0 +1,33 @@
+<%= form_for(@content, class: 'form-horizontal' ) do |f| %>
+
+    <div class="form-horizontal">
+      <div class="control-group">
+        <div class =" control-label ">
+          <%= f.label :title %>
+        </div>
+        <div class="controls">
+          <%= f.text_field :title  %> <br/>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <div class =" control-label ">
+          <%= f.label :content %>
+        </div>
+        <div class="controls">
+          <%= f.text_area :content, :rows => 6 %>
+        </div>
+      </div>
+      <!--<div class="checkbox inline">-->
+      <%# Category.all.each do |cat| %>
+      <ul><%#= check_box_tag('categories[]', cat.id) %>
+        <%#= cat.name %></ul>
+      <%# end %>
+      <!--</div>-->
+      <div class="control-group">
+        <div class="controls">
+        <%= f.submit %>
+        </div>
+      </div>
+    </div>
+<% end %>
