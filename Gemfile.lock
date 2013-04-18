@@ -6,6 +6,13 @@ GIT
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
 
+GIT
+  remote: git@github.com:norman/friendly_id.git
+  revision: 903f2fac79774edb119a7f6baa2396ab7c555d47
+  branch: rails4
+  specs:
+    friendly_id (4.1.0.beta.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -46,7 +53,6 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    friendly_id (4.0.9)
     hike (1.2.2)
     i18n (0.6.4)
     jbuilder (1.0.2)
@@ -61,6 +67,8 @@ GEM
     multi_json (1.7.2)
     mysql2 (0.3.11)
     polyglot (0.3.3)
+    protected_attributes (1.0.1)
+      activemodel (>= 4.0.0.beta, < 5.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -115,10 +123,11 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0.beta1)
-  friendly_id (~> 4.0.9)
+  friendly_id!
   jbuilder (~> 1.0.1)
   jquery-rails!
   mysql2
+  protected_attributes
   rails (= 4.0.0.beta1)
   sass-rails (~> 4.0.0.beta1)
   turbolinks

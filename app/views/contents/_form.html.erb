@@ -18,6 +18,7 @@
           <%= f.text_area :content, :rows => 6 %>
         </div>
       </div>
+      <%= f.text_field :tags_list, :input_html => {:placeholder => 'Tags', :value => f.object.tags_list} %>
       <!--<div class="checkbox inline">-->
       <%# Category.all.each do |cat| %>
       <ul><%#= check_box_tag('categories[]', cat.id) %>

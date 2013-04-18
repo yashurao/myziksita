@@ -11,13 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130417165543) do
+ActiveRecord::Schema.define(version: 20130418175304) do
+
+  create_table "content_tags", force: true do |t|
+    t.integer  "content_id"
+    t.integer  "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "contents", force: true do |t|
     t.string   "title"
     t.string   "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
+  end
+
+  add_index "contents", ["slug"], name: "index_contents_on_slug"
+
+  create_table "tags", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.string   "#<ActiveRecord::ConnectionAdapters::TableDefinition:0x94d8dd0>"
   end
 
 end

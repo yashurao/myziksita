@@ -1,3 +1,5 @@
+<%= link_to 'New Article', new_content_path, class: 'btn btn-primary' %>
+<br>
 <% @contents.each do |c| %>
     <%= link_to c.title, content_path(c) %>
     <br/>

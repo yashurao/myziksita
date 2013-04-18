@@ -26,7 +26,6 @@ class ContentsController < ApplicationController
   end
 
   def update
-    @content = Content.find(params[:id])
     content = params[:content]
     @content.update_attributes(title: content['title'], content: content['content'])
     redirect_to content_path(@content)
