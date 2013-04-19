@@ -2,29 +2,31 @@
 <html>
 <head>
   <title>Ziksita</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <!--<div class="container">-->
+<br>
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span12" style="background-color: navajowhite">
-      <%= link_to 'Banner', root_path, class: 'span3' %>
+      <%= link_to 'Home', root_path, class: 'span', style: 'font-size: 40px; text-decoration: none; margin-top: 10px;' %>
       <br><br>
     </div>
   </div>
+  <br>
   <div class="row-fluid">
 
     <div class="span2" style="background-color: burlywood">
       Sidebar content
     </div>
-    <div class="span10" style="background-color: lavenderblush">
-      <%= yield %>
+      <div class="span10" style="background-color: lavenderblush">
+        <%= yield %>
+      </div>
     </div>
-  </div>
-<!--</div>-->
+  <!--</div>-->
 </div>
 </body>
 </html>

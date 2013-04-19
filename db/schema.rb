@@ -22,19 +22,17 @@ ActiveRecord::Schema.define(version: 20130418175304) do
 
   create_table "contents", force: true do |t|
     t.string   "title"
-    t.string   "content"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
   end
 
-  add_index "contents", ["slug"], name: "index_contents_on_slug"
-
   create_table "tags", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.string   "#<ActiveRecord::ConnectionAdapters::TableDefinition:0x94d8dd0>"
+    t.string   "#<ActiveRecord::ConnectionAdapters::TableDefinition:0xa7260b4>"
   end
 
 end
