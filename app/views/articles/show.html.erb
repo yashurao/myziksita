@@ -5,7 +5,7 @@
 <br/>
 <%= @article.content %>
 <br/>
-<%= @article.tags.map(&:name).join(',') %>
-<br/>
-<%= link_to 'edit', edit_article_path(@article) %>
-<%= link_to 'delete', article_path(@article), method: 'delete', confirm: 'Are you sure?' %>
+<%= raw (@article.tags.map { |t| (link_to t.name, tag_path(t), class: 'article_tag') }.join(' , ')) + '.' %>
+<br/><br/>
+<%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-inverse' %>
+<%= link_to 'Delete', article_path(@article), method: 'delete', confirm: 'Are you sure?', class: 'btn btn-danger' %>

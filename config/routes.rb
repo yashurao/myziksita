@@ -1,6 +1,9 @@
 Ziksita::Application.routes.draw do
 
   resources :articles
+
+  get '/tag/:id' => 'tags#show', as: :tag
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
