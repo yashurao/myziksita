@@ -1,0 +1,11 @@
+<%= link_to 'index', articles_path %>
+<br/>
+<br/>
+<%= @article.title %>
+<br/>
+<%= @article.content %>
+<br/>
+<%= @article.tags.map(&:name).join(',') %>
+<br/>
+<%= link_to 'edit', edit_article_path(@article) %>
+<%= link_to 'delete', article_path(@article), method: 'delete', confirm: 'Are you sure?' %>

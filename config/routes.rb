@@ -1,6 +1,6 @@
 Ziksita::Application.routes.draw do
 
-  resources :contents
+  resources :articles
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -48,5 +48,5 @@ Ziksita::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root 'contents#index'
+  root 'articles#index'
 end
