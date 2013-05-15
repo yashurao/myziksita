@@ -1,9 +1,9 @@
-<%= link_to 'New Article', new_article_path, class: 'btn btn-inverse span', style: 'float: right;' %>
-<br>
+<%= link_to 'New Article', new_article_path, class: 'btn btn-primary span', style: 'float: right;' %>
+<div class="article_index">
 <% @articles.each do |c| %>
       <div class="row-fluid article_show" style="">
         <div class="span10 " style="">
-        <%= link_to c.title, article_path(c) %>
+        <%= link_to c.title, article_path(c), class: 'article_index_title' %>
         <%= "#{time_ago_in_words(c.created_at)} ago " %>
         <br/>
         <%= truncate(c.content, length: 300) %>
@@ -15,3 +15,4 @@
       </div>
       </div>
   <% end %>
+</div>

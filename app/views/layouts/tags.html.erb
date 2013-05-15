@@ -7,13 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="wrap">
-  <div class="header" style="background-color: powderblue; position: fixed; width: 100%">
-    <%= "render :partial => 'layouts/header'" %>
-  </div>
+<!--<div class="container">-->
+<br>
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="span12 " id="ziksita_header">
+    <div class="span12" style="background-color: navy">
       <%= link_to 'Home', root_path, class: 'span', style: 'font-size: 40px; text-decoration: none; margin-top: 10px;' %>
       <br><br>
     </div>
@@ -21,14 +19,14 @@
   <br>
   <div class="row-fluid">
 
-    <div class="span2" style="background-color: burlywood">
+    <div class="span2" style="background-color: bisque">
       Sidebar content
     </div>
-      <div class="span10" style="background-color: lavenderblush">
-        <%= yield %>
-      </div>
+    <div class="span10" style="background-color: lightcyan">
+      <%= yield %>
     </div>
   </div>
+  <!--</div>-->
 </div>
 </body>
 </html>

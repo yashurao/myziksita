@@ -1,4 +1,5 @@
 class TagsController < ApplicationController
+  layout 'tags'
 
   def show
     tag = Tag.find params[:id]

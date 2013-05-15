@@ -6,7 +6,7 @@
           <%= f.label :title %>
         </div>
         <div class="controls">
-          <%= f.text_field :title  %> <br/>
+          <%= f.text_field :title, placeholder: 'Title'  %> <br/>
         </div>
       </div>
 
@@ -15,17 +15,21 @@
           <%= f.label :content %>
         </div>
         <div class="controls">
-          <%= f.text_area :content, :rows => 6 %>
+          <%= f.text_area :content, :rows => 6 , placeholder: 'Write your Article ' %>
         </div>
       </div>
-      <%#= f.text_field :tags_list, :input_html => {:placeholder => 'Tags', :value => f.object.tags_list} %>
-      <%= f.text_field :tags_list %>
-      <!--<div class="checkbox inline">-->
-      <%# Category.all.each do |cat| %>
-      <ul><%#= check_box_tag('categories[]', cat.id) %>
-        <%#= cat.name %></ul>
-      <%# end %>
-      <!--</div>-->
+
+      <div class="control-group">
+        <div class =" control-label ">
+          <%= f.label :tags_list %>
+        </div>
+        <div class="controls">
+          <%= f.text_field :tags_list, placeholder: "Enter tags separated by comma ',' " %>
+        </div>
+      </div>
+
+
+
       <div class="control-group">
         <div class="controls">
         <%= f.submit %>
