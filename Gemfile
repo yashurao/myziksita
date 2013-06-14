@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0.beta1'
 
 gem 'mysql2'
-gem 'friendly_id', git: 'git@github.com:norman/friendly_id.git', :branch => 'rails4'
+gem 'friendly_id', git: 'git@github.com:FriendlyId/friendly_id.git', :branch => 'rails4'
+#gem 'friendly_id', github: 'FriendlyId/friendly_id', branch: 'rails4'
 gem 'protected_attributes'
 # Use SCSS for stylesheets
 gem 'sass-rails',   '~> 4.0.0.beta1'

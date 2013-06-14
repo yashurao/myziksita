@@ -27,8 +27,10 @@ class Article < ActiveRecord::Base
     unless @tags_list.blank?
       tags = @tags_list.split(',')
       tags.each do |tags|
-        tags = tags.to_s.strip
-        tags_exists = Tag.find_or_create_by_name(tags)
+        tag = tags.to_s.strip
+        tags_exists = Tag.find_or_initialize_by(name: tag)
+        tags_exists.name = tag
+        tags_exists.save(validate: false)
         tag_id =  tags_exists.id
         self.article_tags.create(article_id: self.id, tag_id: tag_id)
       end
