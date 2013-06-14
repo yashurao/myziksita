@@ -3,7 +3,7 @@
 <% @articles.each do |c| %>
       <div class="row-fluid article_show" style="">
         <div class="span10 " style="">
-        <%= link_to c.title, article_path(c), class: 'article_index_title' %>
+        <%= link_to c.title, article_slug_path(c), class: 'article_index_title' %>
         <%= "#{time_ago_in_words(c.created_at)} ago " %>
         <br/>
         <%= truncate(c.content, length: 300) %>

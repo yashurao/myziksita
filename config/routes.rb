@@ -1,6 +1,7 @@
 Ziksita::Application.routes.draw do
 
   resources :articles
+  match '/articles/:id' => 'articles#show', via: :get, as: 'article_slug'
 
   get '/tag/:id' => 'tags#show', as: :tag
 
