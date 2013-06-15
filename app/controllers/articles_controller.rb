@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    Article.create(params[:article])
+    current_user.articles.create(params[:article])
     redirect_to article_path(@article)
   end
 

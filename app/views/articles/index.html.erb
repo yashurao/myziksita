@@ -1,4 +1,6 @@
-<%= link_to 'New Article', new_article_path, class: 'btn btn-primary span', style: 'float: right;' %>
+<% if user_signed_in? %>
+    <%= link_to 'New Article', new_article_path, class: 'btn btn-success span2', style: 'float: right;' %>
+<% end %>
 <div class="article_index">
 <% @articles.each do |c| %>
       <div class="row-fluid article_show" style="">
