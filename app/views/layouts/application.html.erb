@@ -2,8 +2,9 @@
 <html>
 <head>
   <title>Ziksita</title>
-  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -11,19 +12,20 @@
   <div class="header" style="background-color: powderblue; position: fixed; width: 100%">
     <%= "render :partial => 'layouts/header'" %>
   </div>
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span12 " id="ziksita_header">
-      <%= link_to 'Home', root_path, class: 'span', style: 'font-size: 40px; text-decoration: none; margin-top: 10px;' %>
-      <br><br>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12 " id="ziksita_header">
+        <%= link_to 'Home', root_path, class: 'span', style: 'font-size: 40px; text-decoration: none; margin-top: 10px;' %>
+        <br><br>
+      </div>
     </div>
-  </div>
-  <br>
-  <div class="row-fluid">
+    <%= render partial: 'layouts/user_login' %>
+    <br>
+    <div class="row-fluid">
 
-    <div class="span2" style="background-color: burlywood">
-      Sidebar content
-    </div>
+      <div class="span2" style="background-color: burlywood">
+        Sidebar content
+      </div>
       <div class="span10" style="background-color: lavenderblush">
         <%= yield %>
       </div>

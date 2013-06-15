@@ -1,5 +1,6 @@
 Ziksita::Application.routes.draw do
 
+  devise_for :users
   resources :articles
   match '/articles/:id' => 'articles#show', via: :get, as: 'article_slug'
 
